@@ -95,6 +95,7 @@ module.exports = {
         path: "app",
         message: [
           "conda install -y -c conda-forge gfortran_osx-arm64",
+          "uv pip install git+https://github.com/rhasspy/piper-phonemize",
           "mkdir -p ./models/xtts"
         ]
       }
