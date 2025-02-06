@@ -9,6 +9,14 @@ module.exports = {
       }
     },
     {
+      when: "{{which('brew')}}",
+      method: "shell.run",
+      params: {
+        message: "brew install espeak-ng"
+      },
+        next: "all"
+    },
+    {
       when: "{{which('apt')}}",
       method: "shell.run",
       params: {
@@ -23,14 +31,6 @@ module.exports = {
       params: {
         sudo: true,
         message: "yum install libaio-devel espeak-ng"
-      },
-        next: "all"
-    },
-    {
-      when: "{{which('brew')}}",
-      method: "shell.run",
-      params: {
-        message: "brew install espeak-ng"
       },
         next: "all"
     },
