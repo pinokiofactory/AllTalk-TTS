@@ -94,7 +94,7 @@ module.exports = {
         conda: "conda_env",
         path: "app",
         message: [
-          "conda install -y -c conda-forge gcc",
+          "conda install -y -c conda-forge gfortran_osx-arm64",
           "mkdir -p ./models/xtts"
         ]
       }
